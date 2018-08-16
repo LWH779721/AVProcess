@@ -41,6 +41,8 @@ struct wav_encode {
 };	
 
 extern struct wav_encode * wav_init(struct pcm_info *pcm_info, char *fname);
+extern int wav_append(struct wav_encode *encoder, unsigned char *pcm_buf, unsigned int pcm_size);
+extern int wav_finish(struct wav_encode *encoder);
 #ifdef __cplusplus
 }
 #endif
